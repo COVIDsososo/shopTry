@@ -34,6 +34,19 @@ class Clock extends React.Component{
 }
 
 
+class ForFor extends React.Component {
+  render(){
+    return(
+      {for (let i = 0; i <= 10; i++) {
+        <div id='icon'>
+        icon
+        </div>
+
+      }
+    )
+  }
+}
+
 class Ground extends React.Component {
 
   render(){
@@ -72,34 +85,7 @@ class Ground extends React.Component {
       </div>
 
       <div id='assor'>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        icon
-        </div>
-        <div id='icon'>
-        iconcon
-        </div>
-
+          <ForFor />
       </div>
 
       <div id="buText">
