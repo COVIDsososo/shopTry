@@ -29,7 +29,7 @@ class Clock extends React.Component{
   }
 
   render(){
-  return <h2> Now time is {this.state.date.toLocaleTimeString()} </h2>
+  return <p><b> Now time is {this.state.date.toLocaleTimeString()} </b></p>
  }
 }
 
@@ -39,14 +39,73 @@ class Ground extends React.Component {
   render(){
   return (
     <div id='gro' >
-      <button onClick={() => this.back()} />
-      gro
-      <div id='elem1' >
-        elem1
-      </div>
+
       <div id='clo'>
         <Clock />
       </div>
+
+      <div id='shop'>
+        <h1>tryShop</h1>
+      </div>
+
+      <div id='but'>
+        <button>but 1</button>
+        <button>but 2</button>
+        <button>but 3</button>
+      </div>
+
+      <input id='inpu'/>
+
+      <div id='menu'>
+        <div id='elem1' >
+          <p>elem1</p>
+        </div>
+        <div id='elem1' >
+          <p>elem1</p>
+        </div>
+        <div id='elem1' >
+          <p>elem1</p>
+        </div>
+        <div id='elem1' >
+          <p>elem1</p>
+        </div>
+      </div>
+
+      <div id='assor'>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        icon
+        </div>
+        <div id='icon'>
+        iconcon
+        </div>
+
+      </div>
+
+      <div id="buText">
+        <p>  </p>
+      </div>
+
     </div>
   )
 }

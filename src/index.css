@@ -1,26 +1,75 @@
 body {
-  margin: 0;
-  padding: 0;
+
   font-family: sans-serif;
   background-color: red
 }
 
-
 #gro {
   background-color: orange;
   display: flex;
-  align-items: stretch;
-
-}
-
-#elem1 {
-  background-color: green;
-  align-self: flex-end;
+  flex-direction: column;
+  height: 900px;
 }
 
 #clo{
   background-color: yellow;
   color: blue;
+  align-self: flex-end;
+}
 
+#but{
+  background-color: tomato;
+  padding: 10px;
+  flex-direction: row-reverse;
+}
 
+#inpu{
+  position: absolute;
+  top: 111px;
+  align-self: center;
+  width: 300px;
+}
+
+#shop{
+  position: absolute;
+  top: 15;
+  left: 15px;
+}
+
+#menu{
+  background-color: pink;
+  padding: 50px;
+  align-self: flex-start;
+}
+
+#elem1 {
+  background-color: green;
+  align-self: flex-start;
+}
+
+#assor{
+  position: absolute;
+  left: 160px;
+  top: 141px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 700px;
+  width: 90%;
+  background-color: indianRed;
+}
+
+#icon{
+  background-color: purple;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px
+}
+
+#buText{
+  background-color: peru;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
 }
