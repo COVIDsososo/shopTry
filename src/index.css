@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: red
+}
+
+
+#gro {
+  background-color: orange;
+  display: flex;
+  align-items: stretch;
+
+}
+
+#elem1 {
+  background-color: green;
+  align-self: flex-end;
+}
+
+#clo{
+  background-color: yellow;
+  color: blue;
+
+
+}
