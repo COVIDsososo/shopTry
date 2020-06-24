@@ -25,9 +25,10 @@ body {
 
 #inpu{
   position: absolute;
-  top: 111px;
+  top: 10%;
   align-self: center;
-  width: 300px;
+  width: 20%;
+  height: 2%
 }
 
 #shop{
@@ -49,22 +50,26 @@ body {
 
 #assor{
   position: absolute;
-  left: 160px;
+  left: 158px;
   top: 141px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  height: 700px;
-  width: 90%;
   background-color: indianRed;
+  height: 90%
 }
 
 #icon{
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+
   background-color: purple;
   width: 300px;
   height: 300px;
   padding: 10px;
-  margin: 10px
+  margin: 10px;
+
 }
 
 #buText{

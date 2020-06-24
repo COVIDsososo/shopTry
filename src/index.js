@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
 
 
@@ -34,25 +33,11 @@ class Clock extends React.Component{
 }
 
 
-class ForFor extends React.Component {
-  render(){
-    return(
-      <>
-      {for (let i = 0; i < 10; i++) {
-        return(
-        <div id='icon'>
-        icon
-        </div>
-      )}
-      </>
-    )
-  }
-}
 
 class Ground extends React.Component {
 
   render(){
-  return (
+    return (
     <div id='gro' >
 
       <div id='clo'>
@@ -69,7 +54,7 @@ class Ground extends React.Component {
         <button>but 3</button>
       </div>
 
-      <input id='inpu'/>
+      <input type='text' id='inpu'/>
 
       <div id='menu'>
         <div id='elem1' >
@@ -87,7 +72,7 @@ class Ground extends React.Component {
       </div>
 
       <div id='assor'>
-          <ForFor />
+        <Elewo />
       </div>
 
       <div id="buText">
@@ -99,15 +84,21 @@ class Ground extends React.Component {
 }
 }
 
+    class Elewo extends React.Component  {
+      render(){
+        const elements = [1, 2, 3, 4, 5, 6 ,7 ,8, 9, 10];
+        const items = [];
+
+        for (const [index, value] of elements.entries()){
+           items.push(<div id='icon' key={index}>{index}</div>)
+      }
+      return <div>{items}</div>
+    }
+  }
 
 let elem2 = <Ground />
 
 ReactDOM.render(
   elem2,
   document.getElementById('root')
-)
-
-ReactDOM.render(
-  <div id='elem2' />,
-  document.getElementById('root2')
 )
