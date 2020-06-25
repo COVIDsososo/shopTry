@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-
 class Clock extends React.Component{
   constructor(props){
     super(props);
@@ -44,31 +43,18 @@ class Ground extends React.Component {
         <Clock />
       </div>
 
-      <div id='shop'>
+      <div id='shopName'>
         <h1>tryShop</h1>
       </div>
 
       <div id='but'>
-        <button>but 1</button>
-        <button>but 2</button>
-        <button>but 3</button>
+        <ButtonMy />
       </div>
 
-      <input type='text' id='inpu'/>
+      <Search />
 
       <div id='menu'>
-        <div id='elem1' >
-          <p>elem1</p>
-        </div>
-        <div id='elem1' >
-          <p>elem1</p>
-        </div>
-        <div id='elem1' >
-          <p>elem1</p>
-        </div>
-        <div id='elem1' >
-          <p>elem1</p>
-        </div>
+        <ElemItems />
       </div>
 
       <div id='assor'>
@@ -84,17 +70,123 @@ class Ground extends React.Component {
 }
 }
 
-    class Elewo extends React.Component  {
-      render(){
+
+class ButtonMy extends React.Component {
+  constructor (props){
+    super(props);
+
+    this.sayHi = this.sayHi.bind(this);
+  }
+
+  sayHi (){
+    return alert('Hello');
+  }
+
+  render(){
+    const elements = [1, 2, 3, 4, 5];
+    const items = [];
+
+    for (const [index, value] of elements.entries()){
+       items.push(<button onClick={this.sayHi} key={index}>Button {index}</button>)
+  }
+  return <div>{items}</div>
+  }
+}
+
+
+
+class Search extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {value: 'search?'};
+
+    this.inpuText = this.inpuText.bind(this);
+    this.inpuAlert = this.inpuAlert.bind(this);
+  }
+
+  inpuText(event){
+    this.setState({
+      value: event.target.value
+    });
+  }
+
+  inpuAlert(event){
+    alert(this.state.value);
+    event.preventDefault();
+  }
+
+  render(){
+    return(
+    <form id='inpu' onSubmit={this.inpuAlert}>
+    <input type='text'  value={this.state.value} onChange={this.inpuText}/>
+    <Selevalue id="selevalue"/>
+    </form>
+  )
+}
+}
+
+
+
+class Selevalue extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {value: "Seleva"};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+
+  handleSubmit(event) {
+    alert('Seleva: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render(){
+    const elements = [1, 2, 3, 4, 5, 6, 7];
+    const items = [];
+
+    for (const [index, value] of elements.entries()){
+       items.push(<option key={index}>{index}</option>)
+  }
+  return <select value={this.state.value} onChange={this.handleChange}>{items}</select>
+}
+}
+
+
+class ElemItems extends React.Component {
+  render(){
+    const elements = [1, 2, 3, 4, 5, 6, 7];
+    const items = [];
+
+    for (const [index, value] of elements.entries()){
+       items.push(<div id='elem1' key={index}><p>elem{index}</p></div>)
+  }
+  return <div>{items}</div>
+}
+}
+
+
+
+class Elewo extends React.Component  {
+    render(){
         const elements = [1, 2, 3, 4, 5, 6 ,7 ,8, 9, 10];
         const items = [];
 
         for (const [index, value] of elements.entries()){
            items.push(<div id='icon' key={index}>{index}</div>)
       }
-      return <div>{items}</div>
+      return <div id='elewoItems'>{items}</div>
     }
   }
+
+
+
+
+
 
 let elem2 = <Ground />
 

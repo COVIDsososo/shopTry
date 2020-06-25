@@ -17,6 +17,9 @@ body {
   align-self: flex-end;
 }
 
+
+
+
 #but{
   background-color: tomato;
   padding: 10px;
@@ -25,17 +28,24 @@ body {
 
 #inpu{
   position: absolute;
-  top: 10%;
+  display: flex;
   align-self: center;
+  top: 104px;
   width: 20%;
   height: 2%
 }
 
-#shop{
+
+
+
+#shopName{
   position: absolute;
   top: 15;
   left: 15px;
 }
+
+
+
 
 #menu{
   background-color: pink;
@@ -48,29 +58,34 @@ body {
   align-self: flex-start;
 }
 
+
+
+
 #assor{
   position: absolute;
   left: 158px;
   top: 141px;
   background-color: indianRed;
-  height: 90%
+  height: auto;
+  width:  auto;
 }
 
 #icon{
-  position: relative;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: stretch;
-
   background-color: purple;
-  width: 300px;
-  height: 300px;
+  width: 274px;
+  height: 274px;
   padding: 10px;
   margin: 10px;
-
 }
+
+#elewoItems{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+
+
 
 #buText{
   background-color: peru;
